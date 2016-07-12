@@ -3,13 +3,13 @@
 Plugin Name: Authorize.net SIM for WP eCommerce
 Plugin URI: https://wpecommerce.org
 Description: Authorize.net SIM extends your WP e-Commerce store by enabling the Authorize.net SIM payment gateway.
-Version: 1.2
+Version: 1.3
 Author: WP eCommerce
 Author URI: https://wpecommerce.org
 */
 
-define( 'WPSC_AUTHSIM_VERSION', '1.2' );
-define( 'WPEC_AUTHSIM_VERSION', '1.2' );
+define( 'WPSC_AUTHSIM_VERSION', '1.3' );
+define( 'WPEC_AUTHSIM_VERSION', '1.3' );
 define( 'WPEC_AUTHSIM_PRODUCT_ID', 637 );
 define( 'WPSC_AUTHSIM_MODULE_PRESENT', true );
 define( 'WPSC_AUTHSIM_FILE_PATH', dirname( __FILE__ ) . '/' );

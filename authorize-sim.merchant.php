@@ -115,6 +115,14 @@ class wpsc_merchant_authorize_sim extends wpsc_merchant {
 		$redirect = $this->sim_url . '?' . $gateway_values;
 		// URLs up to 2083 characters long are short enough for an HTTP GET in all browsers.
 		// Longer URLs require us to build a seperate form and POST it
+		//Use post instead of wp_redirect to avoid GET requests
+		wp_register_script( 'wpec_auth_sim_post', WPSC_AUTHSIM_URL . 'js/post_submit.js', array( 'jquery' ) );
+		wp_enqueue_script( 'wpec_auth_sim_post' );
+		$_SESSION['sim-checkout'] = $this->collected_gateway_data;
+		add_filter( 'wpsc_path_wpsc-shopping_cart_page.php', array( $this, 'filter_cart_page' ) );
+		return;		
+		
+		/*
 		if ( strlen( $redirect ) > 2083 ) {
 			//take over the shown page
 			wp_register_script( 'wpec_auth_sim_post', WPSC_AUTHSIM_URL . 'js/post_submit.js', array( 'jquery' ) );
@@ -132,6 +140,7 @@ class wpsc_merchant_authorize_sim extends wpsc_merchant {
 			wp_redirect( $redirect );
 			exit();
 		}
+		*/
 	}
 
 	public function filter_cart_page( $file_path ) {
