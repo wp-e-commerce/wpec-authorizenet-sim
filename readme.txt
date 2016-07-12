@@ -1,10 +1,10 @@
 === WP eCommerce Authorize.net SIM ===
 Contributors: WP eCommerce.org
 Tags: eCommerce, shop, cart, goldcart
-Version: 1.2
+Version: 1.3
 Requires at least: 4.0
-Tested up to: 4.5.2
-Stable tag: 1.2
+Tested up to: 4.6
+Stable tag: 1.3
 Requires: WP eCommerce: 3.11
 
 == Description ==
@@ -20,6 +20,8 @@ all the steps in the secure transaction process:
 
 == Changelog ==
 
+= 1.3 =
+* Tweak: Gateway will now send data using POST to follow the upcoming Authorize.net rules coming July 30
+
 = 1.2 =
 * Changed: Plugin updater code has been adjusted. Licenses might need to be readded to the WPeC Licensing page.
-
